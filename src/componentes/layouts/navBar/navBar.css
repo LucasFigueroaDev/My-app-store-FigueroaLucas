@@ -1,13 +1,15 @@
 .mainTitle {
     color: #000;
+    font-family: "Satisfy", cursive;
     font-weight: 450;
+    text-shadow: 5px 1px 10px #fa0000;
 }
 
 .navBar {
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
-    background-color: #0ff;
+    background-color: rgba(0, 89, 255, 0.247);
 }
 
 .navContainer {
@@ -25,5 +27,10 @@
 
 .navLink {
     color: #000;
+    font-size: 1rem;
+    font-style: italic;
+}
+.navLink:hover {
+    transition: font-size 1s;
     font-size: 1.3rem;
 }

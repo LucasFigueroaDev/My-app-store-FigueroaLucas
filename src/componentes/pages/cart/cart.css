@@ -1,0 +1,11 @@
+.cart-container {
+    width: 90rem;
+    background-color: #f6f6f8;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cart-title {
+    font-weight: 450;
+    padding-top: 2rem;
+}
