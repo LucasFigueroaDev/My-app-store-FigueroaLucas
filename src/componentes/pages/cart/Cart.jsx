@@ -6,7 +6,7 @@ const Cart = () => {
         <div className="cart-container">
             <h2 className="cart-title">Tu carrito de compras</h2>
 
-            <Link to='/checkout'>Finalizar compra</Link>
+            <Link className="finish-button" to='/checkout'>Finalizar compra</Link>
         </div>
     )
 }

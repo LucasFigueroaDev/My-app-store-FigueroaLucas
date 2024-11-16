@@ -1,5 +1,6 @@
 .cart-container {
     width: 90rem;
+    height: 60rem;
     background-color: #f6f6f8;
     margin: 0 auto;
     text-align: center;
@@ -8,4 +9,19 @@
 .cart-title {
     font-weight: 450;
     padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.finish-button {
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.7rem 1.5rem;
+}
+
+.finish-button:hover {
+    background-color: #575555;
+    color: #fff;
+    border: 1px solid #000;
 }

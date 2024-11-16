@@ -38,3 +38,8 @@
     padding: 0 1rem;
     border-radius: 1rem;
 }
+
+.productCard_button:hover {
+    background-color: #575555;
+    color: #fff;
+}
