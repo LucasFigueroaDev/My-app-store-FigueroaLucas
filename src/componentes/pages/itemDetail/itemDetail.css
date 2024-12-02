@@ -41,20 +41,6 @@
     margin-bottom: 1.5rem;
 }
 
-.btnAdd {
-    color: #000;
-    background-color: #e6e6e6;
-    margin-top: 5rem;
-    padding: 0.5rem 1rem; 
-    border: 1px solid #ccc;
-    border-radius: 2rem;
-}
-
-.btnAdd:hover {
-    background-color: #575555;
-    color: #fff;
-}
-
 .title-secundary {
     font-weight: 550;
     margin-bottom: 2rem;

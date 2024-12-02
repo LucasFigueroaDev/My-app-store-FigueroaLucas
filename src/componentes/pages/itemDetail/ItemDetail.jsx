@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../../products";
-import { Link } from "react-router-dom";
+import Counter from "../../common/counter/Counter";
 import './itemDetail.css';
 
 const ItemDetail = () => {
@@ -21,7 +21,7 @@ const ItemDetail = () => {
                 <div className="detail-product">
                     <p className="price">${product.price}</p>
                     <p className="stock">Stock disponible: {product.stock}</p>
-                    <Link to='/cart' className="btnAdd">Agregar producto al carrito</Link>
+                    <Counter stock={product}/>
                 </div>
             </div>
             <div className="product-description">

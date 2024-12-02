@@ -1,0 +1,24 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btns_inc-decr {
+    display: flex;
+    align-items: center;
+}
+
+.buttonCount {
+    margin: 0 1rem;
+    padding: 5px;
+    font-size: 1.5rem;
+    background-color: rgba(0, 89, 255, 0.247);
+    border-radius: 5px;
+}
+
+.buttonAdd {
+    padding: 5px 1rem;
+    background-color: rgba(0, 89, 255, 0.247);
+    border-radius: 5px;
+}
