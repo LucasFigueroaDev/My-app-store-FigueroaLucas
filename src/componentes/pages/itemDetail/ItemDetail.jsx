@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../../../products";
+import { db } from "../../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore";
 import Counter from "../../common/counter/Counter";
 import './itemDetail.css';
 
 const ItemDetail = () => {
     const { id } = useParams();
-
     const [product, setProduct] = useState({});
+
     useEffect(() => {
-        let productSelected = products.find((item) => item.id === +id);
-        setProduct(productSelected);
+        let productSelected = collection(db, "products");
+        let refDoc = doc(productSelected, id);
+        const getDocById = getDoc(refDoc);
+        getDocById.then((res)=>{
+            setProduct({...res.data(), id: res.id});
+        })
     }, [id]);
 
     return (
         <div className="container">
             <h2 className="title">{product.title}</h2>
             <div className="contains-products">
-                <img className="image" src={product.img} alt={product.alt} />
+                <img className="image" src={product.img} />
                 <div className="detail-product">
                     <p className="price">${product.price}</p>
                     <p className="stock">Stock disponible: {product.stock}</p>
