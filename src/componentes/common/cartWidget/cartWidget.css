@@ -1,10 +1,6 @@
-.cartLogo {
-    width: 2rem;
-    height: auto;
-}
 .cartCounter {
     position: relative;
-    bottom: 5px;
-    right: 23px;
-    color: #000;
+    bottom: 10px;
+    right: 29px;
+    color: #fff;
 }

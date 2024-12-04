@@ -26,7 +26,7 @@ const ItemDetail = () => {
                 <div className="detail-product">
                     <p className="price">${product.price}</p>
                     <p className="stock">Stock disponible: {product.stock}</p>
-                    <Counter stock={product}/>
+                    <Counter/>
                 </div>
             </div>
             <div className="product-description">

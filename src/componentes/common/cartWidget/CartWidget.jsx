@@ -1,11 +1,15 @@
-import { Link } from 'react-router-dom'
-import './CartWidget.css' 
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../../context/CartContext';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import './CartWidget.css';
+
 const CartWidget = () => {
-    const cart = ['./public/bolsaDeCompra.png', 'logo de bolsa de compra']
+    const { cart } = useContext(CartContext);
     return (
         <Link to='/cart'>
-            <img className="cartLogo" src={cart[0]} alt={cart[1]} width='512' height='512' />
-            <span className="cartCounter">0</span>
+            <ShoppingBagIcon style={{ color: 'black', fontSize: "48px" }} />
+            <span className="cartCounter">{cart.length}</span>
         </Link>
     )
 }
