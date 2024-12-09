@@ -1,15 +1,31 @@
 .cart {
-    background-color: #f1f1f1;
-    width: 90rem;
-    height: 100%;
+    max-width: 90rem;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 .cart-containers {
+    background-color: #f1f1f1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 200px 200px 200px 200px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
     justify-items: center;
+    padding: 3rem;
+}
+
+.cart-empty {
+    background-color: #f3f3f3;
+    max-width: 90rem;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.empty-txt {
+    color: #000;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 1rem;
 }
 
 .cart-title {
@@ -27,9 +43,8 @@
     border-radius: 10px;
     text-align: center;
     width: 500px;
-    height: 10rem;
     padding: 1rem;
-    margin: 1rem;
+    margin-top: 2rem;
 }
 
 .cart-subtitle {
@@ -45,6 +60,48 @@
     font-size: 1.3rem;
 }
 
-.finish-button {
+.cart-removeBtn {
+    background-color: rgba(0, 89, 255, 0.247);
+    padding: 0 1rem;
+    margin-top: 5px;
+    border: 1px solid #a5a5a5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-removeBtn:hover {
+    background-color: #f84f4f;
+    color: #fff;
+}
+
+.cart-total {
+    font-size: 1.5rem;
     grid-column: 1/3;
+}
+
+.finish-button,
+.clear-button {
+    background-color: rgba(0, 89, 255, 0.247);
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 2rem;
+    padding: 5px 1rem;
+    grid-column: 1/3;
+}
+
+.clear-button:hover {
+    background-color: #f84f4f;
+    color: #fff;
+}
+
+.finish-button {
+    padding: 5px 3rem;
+    letter-spacing: 3px;
+}
+
+.finish-button:hover {
+    background-color: #6efc75;
+    border: 1px solid rgba(0, 89, 255, 0.247);
 }
