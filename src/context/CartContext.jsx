@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import './swalFire.css';
+import Swal from 'sweetalert2';
 
 export const CartContext = createContext();
 
@@ -17,6 +19,17 @@ export const CartContextProvider = ({ children }) => {
             }
         })
 
+        Swal.fire({
+            position: "top-end",
+            title: "Producto agregado con exito",
+            showConfirmButton: false,
+            customClass: {
+                container: 'swalContainer',
+                popup: 'swalPopup',
+                title: 'swalTitle'
+            },
+            timer: 1000
+        });
     };
 
     const removeProduct = (id) => {
