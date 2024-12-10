@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
-import { useParams } from "react-router-dom";
-import './itemListContainer.css';
-import { db } from "../../../firebaseConfig";
 import { collection, addDoc, getDocs, query, where, Query } from "firebase/firestore";
+import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import PuffLoader from "react-spinners/PuffLoader";
+import ItemList from "./ItemList";
+
+import './itemListContainer.css';
 
 const ItemListContainer = () => {
     const [myProducts, setMyProducts] = useState([]);
@@ -26,14 +28,17 @@ const ItemListContainer = () => {
         })
     }, [name]);
 
-    return (
-        <>
-            <h2 className="item-title">Los mejores productos del mercado</h2>
-            <ItemList myProducts={myProducts} />
-        </>
+    if (myProducts.length === 0) {
+        return <div className="page"><div className="spinners"><PuffLoader color="rgba(0, 89, 255, 1)" /></div></div>
+    } else {
+        return (
+            <div>
+                <h2 className="item-title">Los mejores productos del mercado</h2>
+                <ItemList myProducts={myProducts} />
+            </div>
+        )
+    }
 
-
-    )
 };
 
 export default ItemListContainer;

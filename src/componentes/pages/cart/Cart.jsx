@@ -4,8 +4,7 @@ import { CartContext } from "../../../context/CartContext";
 import './cart.css';
 
 const Cart = () => {
-    const { cart, removeProduct, clearCart } = useContext(CartContext);
-    const total = cart.reduce((total, el)=>total + el.price * el.quantity, 0);
+    const { cart, removeProduct, clearCart, totalPrices } = useContext(CartContext);
 
     if (cart.length === 0) {
         return (
@@ -29,7 +28,7 @@ const Cart = () => {
                             <button className="cart-removeBtn" onClick={() => removeProduct(el.id)}>Eliminar Producto</button>
                         </div>
                     })}
-                    <p className="cart-total">Total: ${total}</p>
+                    <p className="cart-total">Total: ${totalPrices()}</p>
                     <button className="clear-button" onClick={()=>clearCart()}>Vaciar Carrito</button>
                     <Link className="finish-button" to='/checkout'>Finalizar compra</Link>
                 </div>

@@ -5,11 +5,11 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import './cartWidget.css';
 
 const CartWidget = () => {
-    const { cart } = useContext(CartContext);
+    const { cart, totalQuantityProducts } = useContext(CartContext);
     return (
         <Link to='/cart'>
             <ShoppingBagIcon style={{ color: 'black', fontSize: "48px" }} />
-            <span className="cartCounter">{cart.length}</span>
+            <span className="cartCounter">{totalQuantityProducts()}</span>
         </Link>
     )
 }
