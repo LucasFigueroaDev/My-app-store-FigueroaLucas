@@ -25,7 +25,7 @@ const Cart = () => {
                             <h3 className="cart-subtitle">{el.title}</h3>
                             <p className="cart-quantity">Cantidad: {el.quantity}</p>
                             <p className="cart-price">precio: ${el.price}</p>
-                            <button className="cart-removeBtn" onClick={() => removeProduct(el.id)}>Eliminar Producto</button>
+                            <button className="cart-remove-btn" onClick={() => removeProduct(el.id)}>Eliminar Producto</button>
                         </div>
                     })}
                     <p className="cart-total">Total: ${totalPrices()}</p>

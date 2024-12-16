@@ -40,11 +40,11 @@ const Counter = ({ }) => {
     return (
         <div className="buttons">
             <div className="btns_inc-decr">
-                <button onClick={handleDecrement} className="buttonCount"> - </button>
+                <button onClick={handleDecrement} className="button-count"> - </button>
                 <p>{count}</p>
-                <button onClick={handleIncrement} className="buttonCount"> + </button>
+                <button onClick={handleIncrement} className="button-count"> + </button>
             </div>
-            <button className="buttonAdd" onClick={onAdd}>Agregar producto al carrito</button>
+            <button className="button-add" onClick={onAdd}>Agregar producto al carrito</button>
         </div>
     )
 }

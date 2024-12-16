@@ -1,36 +1,87 @@
-.mainTitle {
+.nav-bar {
+    background-color: rgba(0, 89, 255, 0.247);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.main-title {
     color: #000;
     font-family: "Satisfy", cursive;
     font-weight: 450;
     text-shadow: 5px 1px 10px #fa0000;
 }
 
-.navBar {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
-    background-color: rgba(0, 89, 255, 0.247);
-}
-
-.navContainer {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-
-.navSelect {
-    font-size: 1rem;
-    padding: 0.5rem;
+.menu-button {
+    display: none;
+    background-color: #000;
+    color: #fff;
     border: none;
-    border-radius: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 3rem;
+    height: 2rem;
 }
 
-.navLink {
-    color: #000;
-    font-size: 1rem;
-    font-style: italic;
+.menu-button:hover {
+    background-color: #007bff;
 }
-.navLink:hover {
-    transition: font-size 1s;
-    font-size: 1.3rem;
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.nav-link {
+    color: #000;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-right: 1rem;
+}
+
+.nav-link:hover {
+    text-shadow: 5px 1px 10px #fa0000;
+}
+
+@media (max-width: 1050px) {
+    .nav-bar {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5px;
+    }
+
+    h1 {
+        text-align: start;
+    }
+
+    .cart-widget {
+        grid-row: 1;
+        grid-column: 2/3;
+        text-align: end;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        text-align: start;
+        grid-column: 1/3;
+        max-height: 0;
+        margin-top: 1rem;
+    }
+
+    .nav-container.open {
+        max-height: 300px;
+    }
+
+    .nav-link:hover {
+        text-shadow: 5px 1px 10px #fa0000;
+    }
 }

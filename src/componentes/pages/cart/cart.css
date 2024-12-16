@@ -60,7 +60,7 @@
     font-size: 1.3rem;
 }
 
-.cart-removeBtn {
+.cart-remove-btn {
     background-color: rgba(0, 89, 255, 0.247);
     padding: 0 1rem;
     margin-top: 5px;
@@ -69,7 +69,7 @@
     cursor: pointer;
 }
 
-.cart-removeBtn:hover {
+.cart-remove-btn:hover {
     background-color: #f84f4f;
     color: #fff;
 }

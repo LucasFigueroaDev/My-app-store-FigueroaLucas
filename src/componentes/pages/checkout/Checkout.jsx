@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../../../context/CartContext';
 import { db } from '../../../firebaseConfig';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, doc, updateDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './checkout.css';
@@ -81,17 +81,25 @@ const Checkout = () => {
                     text: "Hubo un error en la compra"
                 });
             })
-            clearCart();
+
+        let productsCollection = collection(db, 'products');
+        order.items.forEach(el => {
+            let refDoc = doc(productsCollection, el.id);
+            updateDoc(refDoc, {stock: el.stock - el.quantity});
+        });
+
+        clearCart();
+
     };
 
     return (
         <>{orderId ? (<div className='checkout-page'>
             <div className='box-ticket'>
-            <p className='txt'>Muchas gracias por tu compra</p>
-            <p className='ticket'>Su número de ticket es: {orderId}</p>
+                <p className='txt'>Muchas gracias por tu compra</p>
+                <p className='ticket'>Su número de ticket es: {orderId}</p>
             </div>
         </div>)
-            :(<div className='checkout-page'>
+            : (<div className='checkout-page'>
                 <div className='checkout-form'>
                     <h2 className='checkout-title'>Tus datos</h2>
                     <form className='form' action="" onSubmit={functionForm}>

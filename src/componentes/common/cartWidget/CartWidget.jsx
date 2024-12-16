@@ -9,7 +9,7 @@ const CartWidget = () => {
     return (
         <Link to='/cart'>
             <ShoppingBagIcon style={{ color: 'black', fontSize: "48px" }} />
-            <span className="cartCounter">{totalQuantityProducts()}</span>
+            <span className="cart-counter">{totalQuantityProducts()}</span>
         </Link>
     )
 }

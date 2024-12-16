@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.buttonCount {
+.button-count {
     margin: 0 1rem;
     padding: 5px;
     font-size: 1.5rem;
@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-.buttonAdd {
+.button-add {
     padding: 5px 1rem;
     background-color: rgba(0, 89, 255, 0.247);
     border-radius: 5px;
