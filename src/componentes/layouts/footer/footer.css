@@ -7,6 +7,8 @@
     bottom: 0;
     width: 100%;
     background-color: #888888;
-    color: #fff;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 550;
     text-align: center;
 }

@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
     return (
         <div className={className("product-card", { "product-card_out-of-stock": product.stock === 0 })}>
             <h3 className="product-card_title">{product.title}</h3>
-            <img className="product-card_image" src={product.img} alt={product.alt} />
+            <img className="product-card_image" src={product.img} alt={product.alt}  width='500' height='500'/>
             <p className="product-card_txt">{product.description}</p>
             <p className="product-card_price">${product.price}</p>
             {product.stock === 0 ? (
