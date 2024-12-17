@@ -137,4 +137,8 @@ input {
     grid-template-columns: 1fr;
     padding: 1rem;
     }
+
+    .checkout-form {
+        grid-row: 3/4;
+    }
 }
